@@ -1,0 +1,49 @@
+//变量的值可以根据自己需求定义
+@function rem($px) {
+    @return $px / $browser-default-font-size * 1rem;
+}
+//浏览器默认字体大小，这个跟设计图宽度有关系(计算公式：20 * (设计图宽度 / 320) + 'px')
+$browser-default-font-size: 46.875px !default;
+
+$--color-danger-base: #f56c6c;
+$--color-orange-base: #ff9539;
+$--color-index-base: rgba(255, 255, 255, .56);
+$--color-input-placeholder: #999;
+$--border-input-base: rem(1.8px) solid #ccc;
+
+$--color-text-primary: #303133 !default;
+$--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
+$--color-text-placeholder: #c0c4cc !default;
+
+$--border-radius-base: rem(10px) !default;
+
+$--height-input-base: rem(70px) !default;
+
+// 苹方-简 常规体
+$--font-family-Regular: PingFangSC-Regular, sans-serif;
+// 苹方-简 中黑体
+$--font-family-Medium: PingFangSC-Medium, sans-serif;
+// 苹方-简 中粗体
+$--font-family-Semibold: PingFangSC-Semibold, sans-serif;
+
+//多行超出隐藏
+@mixin lineClamp($n: 1) {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:$n;
+}
+@mixin relativeCenter() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.abs-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
