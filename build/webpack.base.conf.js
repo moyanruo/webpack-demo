@@ -18,6 +18,7 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
+	// resolve 合并路径
 	context: path.resolve(__dirname, '../'),
 	// 入口配置
 	entry: {
@@ -25,6 +26,7 @@ module.exports = {
 	},
 	// 出口配置
 	output: {
+		// path 绝对路径 __dirname:项目的绝对目录
 		path: config.build.assetsRoot,
 		filename: '[name].js',
 		publicPath: process.env.NODE_ENV !== 'dev'
